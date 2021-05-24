@@ -1,0 +1,34 @@
+DELIMITER $$
+CREATE PROCEDURE sp_altera(
+	IN icpf VARCHAR(50),
+	IN iprontuario INT,
+	IN inome VARCHAR(50),
+	IN isobrenome VARCHAR(50),
+	IN idata_nasc DATE,
+	IN igenero VARCHAR(50),
+	IN irg VARCHAR(50),
+	IN iuf_rg VARCHAR(50),
+	IN iemail VARCHAR(50),
+	IN icelular VARCHAR(50),
+	IN itelefone VARCHAR(50),
+	IN iconvenio VARCHAR(50),
+	IN iid_convenio INT,
+	IN ivalid_convenio DATE
+)
+BEGIN
+   update paciente set 
+   	prontuario=iprontuario,
+   	nome=inome,
+		sobrenome=isobrenome,
+		data_nasc=idata_nasc,
+		genero=igenero,
+		rg=irg,
+		uf_rg=iuf_rg,
+		email=iemail,
+		celular=icelular,
+		telefone=itelefone,
+		convenio=iconvenio,
+		id_convenio=iid_convenio,
+		valid_convenio=ivalid_convenio
+	where cpf=icpf;
+END$$

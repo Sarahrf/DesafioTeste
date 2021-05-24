@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE sp_select
+(
+	IN icpf VARCHAR(50)
+)
+BEGIN
+   select * from paciente
+	where cpf=icpf;
+END$$
