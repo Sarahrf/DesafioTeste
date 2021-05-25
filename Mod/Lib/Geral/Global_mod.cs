@@ -1,29 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
-using System.Data.OleDb;
-using System.IO;
-using System.IO.MemoryMappedFiles;
-using System.Linq;
-using System.Net;
-using System.Net.Mime;
-using System.Reflection;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.Util;
-using System.Xml;
-using System.Threading.Tasks;
-using Mod.Lib;
 
 
 namespace Mod.Lib.Geral
 {
-    
+
 
     public class Global_mod 
     {
