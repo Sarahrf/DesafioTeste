@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Mod.Lib.Geral;
+using System;
 using System.Data;
-using System.IO;
-using System.Text;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
-
-using Mod.Lib;
-using Mod.Lib.Bll;
-using Mod.Lib.Geral;
 
 
 namespace DesafioTeste
@@ -136,7 +127,7 @@ namespace DesafioTeste
         }
         public void dtAtualizarPagina(DataTable dtret)
         {
-            string vstr;
+
 
             foreach (DataRow dw in dtret.Rows)
             {

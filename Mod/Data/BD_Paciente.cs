@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Linq;
-using System.IO;
-using System.Text;
-using MySql.Data.MySqlClient;
 
 namespace Mod.Data
 {
@@ -16,9 +12,9 @@ namespace Mod.Data
         {
 
             DataTable dt = new DataTable();
-                       
-           
-            bdConn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Conneu"].ConnectionString;
+
+
+            bdConn.ConnectionString = Mod.Lib.Geral.Global_mod.GetConnectString();
             MySqlCommand bdCmd = new MySqlCommand("sp_select", bdConn);
             bdCmd.CommandType = CommandType.StoredProcedure;
             
@@ -58,8 +54,8 @@ namespace Mod.Data
 
             MySqlCommand bdCmd = new MySqlCommand();
 
-            bdConn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Conneu"].ConnectionString;
-            
+            bdConn.ConnectionString = Mod.Lib.Geral.Global_mod.GetConnectString();
+
             bdCmd = new MySqlCommand("sp_insere", bdConn);
             bdCmd.CommandType = CommandType.StoredProcedure;
 
@@ -105,7 +101,7 @@ namespace Mod.Data
 
             MySqlCommand bdCmd = new MySqlCommand();
 
-            bdConn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Conneu"].ConnectionString;
+            bdConn.ConnectionString = Mod.Lib.Geral.Global_mod.GetConnectString();
             bdCmd = new MySqlCommand("sp_altera", bdConn);
             bdCmd.CommandType = CommandType.StoredProcedure;
 

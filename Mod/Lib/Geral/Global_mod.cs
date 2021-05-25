@@ -23,8 +23,15 @@ using Mod.Lib;
 
 namespace Mod.Lib.Geral
 {
+    
+
     public class Global_mod 
     {
+        public static string GetConnectString()
+        {
+           return ConfigurationManager.ConnectionStrings["Conneu"].ConnectionString;           
+        }
+
         public static String ValidaCaracteres(String texto)
         {
             var retorno = texto;
